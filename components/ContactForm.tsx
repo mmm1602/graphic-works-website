@@ -60,7 +60,7 @@ export default function ContactForm() {
             name="name"
             type="text"
             placeholder="Your Name"
-            className="w-full border border-gray-300 p-3 rounded-md"
+            className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
             value={formData.name}
             onChange={handleChange}
             required
