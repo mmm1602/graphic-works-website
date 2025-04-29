@@ -5,7 +5,6 @@ import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
 import PortfolioSection from '@/components/PortfolioSection';
 import AboutSection from '@/components/AboutSection';
-import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   return (
