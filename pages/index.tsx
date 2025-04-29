@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Professional Web Design | YourAgencyName</title>
+        <title>Professional Web Design | GraphicWorks</title>
         <meta name="description" content="We build stunning, responsive websites for businesses." />
       </Head>
 
