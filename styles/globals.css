@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Custom global styles (optional) */
+body {
+  @apply bg-white text-gray-800;
+  font-family: 'Inter', sans-serif;
+}
