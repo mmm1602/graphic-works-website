@@ -30,7 +30,7 @@ export default function ContactForm() {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-        }),
+        }),       
       });
 
       if (!res.ok) throw new Error('Failed to send message');
