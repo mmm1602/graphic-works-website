@@ -13,7 +13,17 @@ export default function PortfolioSection() {
               </div>
             </div>
             {/* Add more projects here */}
-          </div>
+            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="/images/3d-model.jpg" alt="3D Model Project" className="w-full h-48 object-cover" />
+                    <div className="p-6">
+                        <h3 className="text-xl font-semibold mb-2">3D Real Estate Visualization</h3>
+                        <p className="text-gray-600">
+                            Interactive 3D models to showcase properties with stunning realism.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {/* Add more projects here */}
         </div>
       </section>
     );
