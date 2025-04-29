@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
 import PortfolioSection from '@/components/PortfolioSection';
 import AboutSection from '@/components/AboutSection';
+import AnimatedShowcase from '@/components/AnimatedShowcase';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <ServicesSection />
+      <AnimatedShowcase />
       <PortfolioSection />
       <AboutSection />
       <Footer />
