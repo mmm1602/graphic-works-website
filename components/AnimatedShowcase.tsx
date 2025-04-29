@@ -42,23 +42,24 @@ export default function AnimatedShowcase() {
   return (
     
     <div className="w-full max-w-5xl mx-auto my-20 perspective-[1000px]">
+        {/* Simulated VS Code top bar */}
+        <div className="flex items-center justify-between px-4 py-2 bg-[#2d2d2d] border-b border-[#444]">
+            {/* Mac window dots */}
+            <div className="flex space-x-2">
+                <span className="w-3 h-3 rounded-full bg-red-500"></span>
+                <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
+                <span className="w-3 h-3 rounded-full bg-green-500"></span>
+            </div>
+            {/* Tab title */}
+            <span className="text-sm text-gray-300 font-mono">index.tsx</span>
+            {/* Spacer */}
+            <div className="w-12"></div>
+        </div>
       <div
         className="w-full h-[400px] rounded-2xl overflow-hidden transform rotate-[2deg] rotate-x-[4deg] rotate-y-[2deg] bg-white shadow-2xl transition-transform duration-700 flex flex-col md:flex-row"
         style={{ transformStyle: 'preserve-3d' }}
       >
-        {/* Simulated VS Code top bar */}
-<div className="flex items-center justify-between px-4 py-2 bg-[#2d2d2d] border-b border-[#444]">
-  {/* Mac window dots */}
-  <div className="flex space-x-2">
-    <span className="w-3 h-3 rounded-full bg-red-500"></span>
-    <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-    <span className="w-3 h-3 rounded-full bg-green-500"></span>
-  </div>
-  {/* Tab title */}
-  <span className="text-sm text-gray-300 font-mono">index.tsx</span>
-  {/* Spacer */}
-  <div className="w-12"></div>
-</div>
+
 
         {/* Code Typing Side */}
         <div className="w-full md:w-1/2 bg-[#1e1e1e] text-green-400 font-mono text-sm p-6 overflow-auto">
