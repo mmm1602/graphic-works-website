@@ -1,10 +1,14 @@
 import { useState } from 'react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 
-export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -12,54 +16,82 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-    setSubmitted(true);
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setError('All fields are required.');
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (!res.ok) throw new Error('Failed to send message');
+
+      setSubmitted(true);
+      setFormData({ name: '', email: '', message: '' });
+      setError('');
+    } catch (err) {
+      console.error(err);
+      setError('Something went wrong. Please try again later.');
+    }
   };
 
   return (
-    <>
-      <Navbar />
-      <main className="max-w-xl mx-auto py-16 px-6">
-        <h1 className="text-4xl font-bold mb-6 text-center">Contact Us</h1>
-        {submitted ? (
-          <p className="text-green-600 text-center">Thanks! We'll be in touch soon.</p>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <input
-              name="name"
-              type="text"
-              placeholder="Your Name"
-              className="w-full border p-3 rounded"
-              onChange={handleChange}
-              required
-            />
-            <input
-              name="email"
-              type="email"
-              placeholder="Your Email"
-              className="w-full border p-3 rounded"
-              onChange={handleChange}
-              required
-            />
-            <textarea
-              name="message"
-              rows={6}
-              placeholder="Your Message"
-              className="w-full border p-3 rounded"
-              onChange={handleChange}
-              required
-            />
-            <button type="submit" className="px-6 py-3 bg-black text-white rounded hover:bg-gray-800 transition">
-              Send Message
-            </button>
-          </form>
-        )}
-      </main>
-      <Footer />
-    </>
+    <div className="max-w-xl mx-auto py-16 px-6">
+      <h1 className="text-4xl font-bold mb-6 text-center">Contact Us</h1>
+
+      {submitted ? (
+        <p className="text-green-600 text-center text-lg">Thanks! We'll be in touch soon.</p>
+      ) : (
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {error && <p className="text-red-600 text-sm text-center">{error}</p>}
+
+          <input
+            name="name"
+            type="text"
+            placeholder="Your Name"
+            className="w-full border border-gray-300 p-3 rounded-md"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+
+          <input
+            name="email"
+            type="email"
+            placeholder="Your Email"
+            className="w-full border border-gray-300 p-3 rounded-md"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows={5}
+            className="w-full border border-gray-300 p-3 rounded-md"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition"
+          >
+            Send Message
+          </button>
+        </form>
+      )}
+    </div>
   );
 }
