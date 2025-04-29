@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Head from 'next/head';
+import ShowcaseCard from '@/components/ShowcaseCard';
 
 export default function Services() {
   return (
@@ -63,6 +64,7 @@ export default function Services() {
         </div>
       </section>
 
+      <ShowcaseCard />
       {/* Pricing Tiers Section */}
       <section className="bg-white max-w-6xl mx-auto py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-12">Web Design Packages</h2>
