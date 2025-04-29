@@ -2,11 +2,26 @@
 import { useState, useEffect } from 'react';
 
 const codeLines = [
-  `<section className="hero">`,
-  `  <h1 className="text-4xl">Welcome</h1>`,
-  `  <p className="text-gray-600">To our clean, fast site.</p>`,
-  `</section>`,
-];
+    `export default function Hero() {`,
+    `  return (`,
+    `    <section className="bg-white py-20 px-6 text-center">`,
+    `      <h1 className="text-5xl font-bold mb-4">`,
+    `        We Build Websites That Grow 🚀`,
+    `      </h1>`,
+    `      <p className="text-lg text-gray-600 mb-6">`,
+    `        Custom web design for brands and businesses.`,
+    `      </p>`,
+    `      <a`,
+    `        href="/contact"`,
+    `        className="inline-block px-6 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition"`,
+    `      >`,
+    `        Get a Free Quote`,
+    `      </a>`,
+    `    </section>`,
+    `  );`,
+    `}`,
+  ];
+  
 
 export default function AnimatedShowcase() {
   const [visibleCode, setVisibleCode] = useState<string[]>([]);
@@ -67,23 +82,32 @@ export default function AnimatedShowcase() {
             )}
           </div>
 
-          {/* Preview Side */}
-          <div className="w-full md:w-1/2 bg-gray-50 p-6 flex flex-col justify-center">
-            <h1
-              className={`text-3xl font-bold mb-4 transition-opacity duration-500 ${
-                previewStage >= 1 ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              Welcome
-            </h1>
-            <p
-              className={`text-gray-600 transition-opacity duration-500 ${
-                previewStage >= 2 ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              To our clean, fast site.
-            </p>
-          </div>
+          {/* Live Preview Side */}
+<div className="w-full md:w-1/2 bg-gray-50 p-6 flex flex-col justify-center">
+  <h1
+    className={`text-3xl font-bold mb-4 transition-opacity duration-500 ${
+      previewStage >= 4 ? 'opacity-100' : 'opacity-0'
+    }`}
+  >
+    We Build Websites That Grow 🚀
+  </h1>
+  <p
+    className={`text-gray-600 transition-opacity duration-500 ${
+      previewStage >= 6 ? 'opacity-100' : 'opacity-0'
+    }`}
+  >
+    Custom web design for brands and businesses.
+  </p>
+  <a
+    href="/contact"
+    className={`inline-block mt-4 px-6 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition ${
+      previewStage >= 10 ? 'opacity-100' : 'opacity-0'
+    }`}
+  >
+    Get a Free Quote
+  </a>
+</div>
+
         </div>
       </div>
     </div>
