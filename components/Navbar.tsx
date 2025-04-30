@@ -6,9 +6,10 @@ export default function Navbar() {
 
   return (
     <nav className="flex items-center justify-between p-6 bg-white shadow-md relative">
-      <Link href="/" className="text-xl font-bold">
-        GraphicWorks
+      <Link href="/" className="text-4xl font-bold">
+        YourAgency
       </Link>
+
 
       {/* Desktop menu */}
       <div className="hidden md:flex space-x-6">
