@@ -1,42 +1,43 @@
-# 🖥️ Graphic Works Website Template
+# 🖥️ Graphic Works – Business Website Template
 
-A modern, responsive website template built for small businesses and freelancers. Designed for visual impact, fast performance, and scalability using React.js and Tailwind CSS. Includes SEO optimization and integrated analytics via Vercel.
+[Live Demo →](https://www.graphicworks.digital)
 
----
-
-## 🚀 Overview
-
-This project was designed to help small businesses showcase their services with a clean, elegant, and fast-loading interface. It is fully responsive and optimized for both user experience and discoverability.
-
-- ✅ Built with **React.js** and **Tailwind CSS**
-- ✅ Deployed on **Vercel** with live analytics
-- ✅ SEO best practices integrated
-- ✅ Reusable component structure
-- ✅ Optimized for performance and accessibility
+**Graphic Works** is a sleek, responsive website template designed for small businesses and creative professionals. Built with modern web technologies, it emphasizes performance, clean design, and usability. Ideal for showcasing services, portfolios, and business information.
 
 ---
 
-## 🧰 Technologies Used
+## 🔧 Tech Stack
 
-- **React.js** – Component-based architecture and dynamic rendering
-- **Tailwind CSS** – Utility-first CSS framework for rapid styling
-- **Vercel** – Continuous deployment, hosting, and analytics
-- **JavaScript (ES6+)** – Core scripting
-- **HTML5 + CSS3** – Semantic structure and styling
+- **React.js** – Component-based front-end architecture
+- **Tailwind CSS** – Utility-first CSS framework for rapid and responsive design
+- **Vercel** – Deployment, hosting, and built-in analytics
+- **JavaScript (ES6+)** – Logic and interactivity
 
 ---
 
-## 📷 Preview
+## ✨ Features
 
-![Site Preview]((https://www.graphicworks.digital/))
+- 🔹 Fast, mobile-friendly design
+- 🔹 SEO-optimized with meta tags and structured layout
+- 🔹 Vercel Analytics for performance and user behavior insights
+- 🔹 Modular components for easy reuse and customization
+- 🔹 Clean, professional layout tailored for business needs
+
+---
+
+## 📸 Live Demo
+
+Visit the live site here:  
+👉 **[https://www.graphicworks.digital](https://www.graphicworks.digital)**
 
 ---
 
 ## 📦 Getting Started
 
-To run locally:
+To run the project locally:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/mmm1602/graphic-works-site.git
-   cd graphic-works-site
+```bash
+git clone https://github.com/mmm1602/graphic-works-site.git
+cd graphic-works-site
+npm install
+npm run dev
