@@ -28,9 +28,7 @@ This project was designed to help small businesses showcase their services with 
 
 ## 📷 Preview
 
-*(Insert a screenshot here or use a Vercel-generated preview link)*
-
-![Site Preview](https://your-image-link-or-vercel-preview.png)
+![Site Preview]((https://www.graphicworks.digital/))
 
 ---
 
