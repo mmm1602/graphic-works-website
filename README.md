@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🖥️ Graphic Works Website Template
 
-## Getting Started
+A modern, responsive website template built for small businesses and freelancers. Designed for visual impact, fast performance, and scalability using React.js and Tailwind CSS. Includes SEO optimization and integrated analytics via Vercel.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project was designed to help small businesses showcase their services with a clean, elegant, and fast-loading interface. It is fully responsive and optimized for both user experience and discoverability.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- ✅ Built with **React.js** and **Tailwind CSS**
+- ✅ Deployed on **Vercel** with live analytics
+- ✅ SEO best practices integrated
+- ✅ Reusable component structure
+- ✅ Optimized for performance and accessibility
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧰 Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **React.js** – Component-based architecture and dynamic rendering
+- **Tailwind CSS** – Utility-first CSS framework for rapid styling
+- **Vercel** – Continuous deployment, hosting, and analytics
+- **JavaScript (ES6+)** – Core scripting
+- **HTML5 + CSS3** – Semantic structure and styling
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📷 Preview
 
-## Deploy on Vercel
+*(Insert a screenshot here or use a Vercel-generated preview link)*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Site Preview](https://your-image-link-or-vercel-preview.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📦 Getting Started
+
+To run locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mmm1602/graphic-works-site.git
+   cd graphic-works-site
