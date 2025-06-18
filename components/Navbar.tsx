@@ -1,20 +1,22 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
   const [showSettings, setShowSettings] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const settingsRef = useRef<HTMLDivElement>(null);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
-    const storedDarkMode = localStorage.getItem('darkMode') === 'true';
-    setIsDarkMode(storedDarkMode);
-    document.documentElement.classList.toggle('dark', storedDarkMode);
+    const storedDarkMode = localStorage.getItem('darkMode');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const darkMode = storedDarkMode !== null ? storedDarkMode === 'true' : true; // Default to true
+    setIsDarkMode(darkMode);
+    document.documentElement.classList.toggle('dark', darkMode);
   }, []);
 
   useEffect(() => {
@@ -114,7 +116,13 @@ export default function Navbar() {
                       onChange={toggleDarkMode}
                       className="sr-only"
                     />
-                    <div className="w-10 h-5 bg-green-300 dark:bg-green-800 rounded-full transition-all duration-300">
+                    <div className="w-10 h-5 bg-green-300 dark:bg-green-800 rounded-full transition-all duration-300 flex items-center px-1 relative">
+                      <span className="absolute left-1 top-1/2 -translate-y-1/2">
+                        <Sun size={14} className="text-yellow-400" />
+                      </span>
+                      <span className="absolute right-1 top-1/2 -translate-y-1/2">
+                        <Moon size={14} className="text-gray-700 dark:text-gray-200" />
+                      </span>
                       <div
                         className={`absolute top-0 left-0 w-5 h-5 bg-white dark:bg-green-400 rounded-full shadow-md transform transition-transform duration-300 ${
                           isDarkMode ? 'translate-x-5' : 'translate-x-0'
@@ -168,7 +176,13 @@ export default function Navbar() {
                       onChange={toggleDarkMode}
                       className="sr-only"
                     />
-                    <div className="w-10 h-5 bg-green-300 dark:bg-green-800 rounded-full transition-all duration-300">
+                    <div className="w-10 h-5 bg-green-300 dark:bg-green-800 rounded-full transition-all duration-300 flex items-center px-1 relative">
+                      <span className="absolute left-1 top-1/2 -translate-y-1/2">
+                        <Sun size={14} className="text-yellow-400" />
+                      </span>
+                      <span className="absolute right-1 top-1/2 -translate-y-1/2">
+                        <Moon size={14} className="text-gray-700 dark:text-gray-200" />
+                      </span>
                       <div
                         className={`absolute top-0 left-0 w-5 h-5 bg-white dark:bg-green-400 rounded-full shadow-md transform transition-transform duration-300 ${
                           isDarkMode ? 'translate-x-5' : 'translate-x-0'
