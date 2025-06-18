@@ -39,18 +39,10 @@ export default function Home() {
       <MatrixBackground />
       <Navbar />
       <HeroSection />
-      <FadeInWhenVisible>
-        <ServicesSection />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <AnimatedShowcase />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <LazyPortfolioSection />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <AboutSection />
-      </FadeInWhenVisible>
+      <ServicesSection />
+      <AnimatedShowcase />
+      <LazyPortfolioSection />
+      <AboutSection />
       <Footer />
     </>
   );
