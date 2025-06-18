@@ -47,7 +47,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-xl mx-auto py-16 px-6">
+    <div className="bg-transparent max-w-xl mx-auto py-16 px-6">
       <h1 className="text-4xl font-bold mb-6 text-center">Contact Us</h1>
 
       {submitted ? (
@@ -88,7 +88,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800 transition"
+            className="w-full bg-transparent border border-gray-300 p-3 text-white py-3 rounded-md hover:bg-gray-800 transition"
           >
             Send Message
           </button>
