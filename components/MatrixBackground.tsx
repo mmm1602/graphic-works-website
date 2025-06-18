@@ -7,11 +7,13 @@ export default function MatrixBackground() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    if (!canvas) return;
+    const ctx = (canvas as HTMLCanvasElement).getContext('2d');
+    if (!ctx) return;
     const width = window.innerWidth;
     const height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
+    (canvas as HTMLCanvasElement).width = width;
+    (canvas as HTMLCanvasElement).height = height;
 
     const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@#$%^&*()';
     const fontSize = 16;
