@@ -15,7 +15,7 @@ export default function Terms() {
 
       <Navbar />
 
-      <section className="py-20 px-6 bg-white text-gray-800 max-w-4xl mx-auto">
+      <section className="py-30 px-6 max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold mb-8">Terms of Service</h1>
 
         <div className="space-y-8 text-sm leading-relaxed">
@@ -71,7 +71,7 @@ export default function Terms() {
           <div>
             <h2 className="text-xl font-semibold mb-2">8. Contact</h2>
             <p>
-              If you have questions about these terms, please email us at <a href="mailto:contact@youragency.com" className="text-blue-600 underline">contact@youragency.com</a>.
+              If you have questions about these terms, please email us at <a href="mailto:graphicworksdigital@gmail.com" className="text-blue-600 underline">graphicworksdigital@gmail.com</a>.
             </p>
           </div>
         </div>

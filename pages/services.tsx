@@ -82,7 +82,7 @@ function PricingTierCard({
     <div
       className={`border rounded-xl p-8 shadow transition ${
         tier.isHighlighted
-          ? 'border-2 border-black bg-stone-100/70 shadow-lg'
+          ? 'border-2 border-black bg-stone-100/30 shadow-lg'
           : 'hover:shadow-lg'
       }`}
     >
@@ -110,9 +110,9 @@ function PricingTierCard({
 
 function ServiceCard({ service }: { service: typeof CORE_SERVICES[number] }) {
   return (
-    <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
-      <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-      <p className="text-gray-600">{service.description}</p>
+    <div className="shadow-md rounded-lg p-6 hover:shadow-lg transition">
+      <h3 className="font-semibold mb-2">{service.title}</h3>
+      <p className="">{service.description}</p>
     </div>
   );
 }
@@ -145,21 +145,21 @@ export default function Services() {
       </section>
 
       {/* Header Section */}
-      <section className="bg-gray-100 py-20 px-6 text-center">
+      <section className="bg-transparent  py-20 px-6 text-center">
         <FadeInWhenVisible>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">What We Offer</h1>
         </FadeInWhenVisible>
         <FadeInWhenVisible>
-          <p className="text-lg max-w-3xl mx-auto text-gray-600">
+          <p className="text-lg max-w-3xl mx-auto">
             From custom websites to full-service digital packages including 3D modeling and photography, we provide high-quality design solutions tailored to your business goals.
           </p>
         </FadeInWhenVisible>
       </section>
 
       {/* Services Grid */}
-      <section className="max-w-6xl mx-auto py-16 px-6 text-center">
+      <section className="max-w-6xl mx-auto py-16 px-6">
         <FadeInWhenVisible>
-          <h2 className="text-3xl font-bold mb-12">Core Services</h2>
+          <h2 className="font-bold mb-12 text-center">Core Services</h2>
         </FadeInWhenVisible>
         <FadeInWhenVisible>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-left">

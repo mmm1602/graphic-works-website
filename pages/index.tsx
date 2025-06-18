@@ -19,7 +19,7 @@ export default function Home() {
       <Head>
         <title>Professional Web Design | GraphicWorks</title>
         <meta name="description" content="Professional web design services for small businesses, startups, and creators." />
-        {/*<link rel="canonical" href="https://yourdomain.com" />*/}
+        <link rel="canonical" href="https://graphicworks.digital" />
         <MetaTags
           title="GraphicWorks | Custom Web Design & Creative Media"
           description="We design modern, high-performing websites and visual experiences that help businesses grow."

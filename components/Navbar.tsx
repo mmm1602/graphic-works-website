@@ -91,7 +91,7 @@ export default function Navbar() {
               className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition duration-200 font-medium relative group px-2 py-1"
             >
               {item.label}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-green-700 dark:bg-green-400 group-hover:w-full transition-all duration-300"></span>
+              {/* Removed underline */}
             </Link>
           ))}
           {/* Settings Dropdown */}

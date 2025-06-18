@@ -34,16 +34,16 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-100 py-12 relative z-10 shadow-lg">
+    <footer className="bg-transparent py-25 relative z-10 shadow-lg">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
           {/* Logo, Tagline, and Copyright */}
           <div className="flex flex-col items-center md:items-start">
-            <h2 className="text-2xl font-bold text-white tracking-tight">GraphicWorks</h2>
-            <p className="text-green-400 mt-2 text-sm">
+            <h2 className="tracking-tight">GraphicWorks</h2>
+            <p className="text-green-400 mt-2">
               &copy; {new Date().getFullYear()} GraphicWorks. All rights reserved.
             </p>
-            <p className="mt-4 text-gray-300 text-center md:text-left max-w-xs">
+            <p className="mt-4 text-center md:text-left max-w-xs">
               Creative solutions for your brand. We design, develop, and deliver.
             </p>
           </div>
@@ -89,8 +89,8 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
-            <div className="mt-4 text-gray-300 text-sm text-center md:text-right">
-              <span className="font-semibold text-white">Get in touch:</span> graphicworksdigital@gmail.com
+            <div className="mt-4 text-sm text-center md:text-right">
+              <span className="font-semibold">Get in touch:</span> graphicworksdigital@gmail.com
             </div>
             <div className="flex gap-4 mt-2">
               {socialLinks.map((social) => (

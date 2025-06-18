@@ -1,34 +1,71 @@
 @import "tailwindcss";
 
+/* Smooth scrolling for better UX */
 html {
   scroll-behavior: smooth;
 }
 
-/* Light Mode */
+/* Light Mode Styles */
 body {
-  @apply bg-white text-stone-950;
-  font-family: 'Inter', sans-serif;
+  @apply bg-white text-black font-sans;
 }
 
-text {
-  @apply bg-white text-stone-950;
-  font-family: 'Inter', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  @apply text-black font-bold;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  @apply text-stone-950;
+p, text {
+  @apply text-black leading-relaxed;
 }
 
-
-/* Dark Mode */
+/* Dark Mode Styles */
 html.dark body {
   @apply bg-black text-zinc-100;
 }
 
-html.dark text {
-  @apply text-white;
+html.dark h1, h2, h3, h4, h5, h6 {
+  @apply text-white font-bold;
 }
 
-html.dark h1,h2,h3,h4,h5,h6 {
-  @apply text-zinc-100;
+html.dark p, html.dark text {
+  @apply text-white leading-relaxed;
+}
+
+/* Accessibility Improvements */
+a {
+  @apply text-green-600 hover:underline focus:outline-none focus:ring-green-500;
+}
+
+html.dark a {
+  @apply text-green-400 hover:underline focus:outline-none focus:ring-green-300;
+}
+
+/* Utility Classes */
+img {
+  @apply rounded-lg shadow-md;
+}
+
+button {
+  @apply px-4 py-2 rounded-md bg-green-600 text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500;
+}
+
+html.dark button {
+  @apply bg-green-500 hover:bg-green-600 focus:ring-green-400;
+}
+
+/* Responsive Typography */
+h1 {
+  @apply text-xl md:text-xl lg:text-5xl;
+}
+
+h2 {
+  @apply text-xl md:text-xl lg:text-4xl;
+}
+
+h3 {
+  @apply text-xl md:text-xl lg:text-3xl;
+}
+
+p {
+  @apply text-base md:text-lg lg:text-xl;
 }

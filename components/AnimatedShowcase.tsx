@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 const codeLines = [
   `export default function Hero() {`,
   `  return (`,
-  `    <section className="bg-white py-20 px-6 text-center">`,
+  `    <section className="py-20 px-6 text-center">`,
   `      <h1 className="text-5xl font-bold mb-4">`,
   `        We Build Websites That Grow 🚀`,
   `      </h1>`,
@@ -56,7 +56,7 @@ export default function AnimatedShowcase() {
     <section className="w-full py-20 bg-gradient-to-b from-black via-black/50 to-green-950/100">
       <div className="w-full max-w-5xl mx-auto my-20 perspective-[1000px]">
       <div
-      className="w-full h-[400px] rounded-2xl overflow-hidden transform rotate-[2deg] rotate-x-[4deg] rotate-y-[2deg] bg-white shadow-5xl transition-transform duration-700 flex flex-col"
+      className="w-full h-[400px] rounded-2xl overflow-hidden transform rotate-[2deg] rotate-x-[4deg] rotate-y-[2deg] bg-white dark:bg-[#2d2d2d] shadow-5xl transition-transform duration-700 flex flex-col"
       style={{ transformStyle: 'preserve-3d' }}
       >
       {/* 🧠 VS Code-style tab bar */}
@@ -83,7 +83,7 @@ export default function AnimatedShowcase() {
       </div>
 
       {/* Live Preview Side */}
-      <div className="w-full md:w-1/2 bg-gray-50 p-6 flex flex-col justify-center">
+      <div className="w-full md:w-1/2 p-6 flex flex-col justify-center">
         <h1
         className={`text-3xl font-bold mb-4 transition-opacity duration-500 ${
         previewStage >= 4 ? 'opacity-100' : 'opacity-0'
@@ -92,7 +92,7 @@ export default function AnimatedShowcase() {
         We Build Websites That Grow 🚀
         </h1>
         <p
-        className={`text-gray-600 transition-opacity duration-500 ${
+        className={` transition-opacity duration-500 ${
         previewStage >= 6 ? 'opacity-100' : 'opacity-0'
         }`}
         >
@@ -100,7 +100,7 @@ export default function AnimatedShowcase() {
         </p>
         <a
         href="/contact"
-        className={`inline-block mt-4 px-6 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition ${
+        className={`inline-block mt-4 px-6 py-3 bg-black/70 text-white rounded-md hover:bg-gray-800 transition ${
         previewStage >= 10 ? 'opacity-100' : 'opacity-0'
         }`}
         >

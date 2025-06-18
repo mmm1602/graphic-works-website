@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
 
       <Navbar />
 
-      <section className="py-20 px-6 bg-white text-gray-800 max-w-4xl mx-auto">
+      <section className="py-30 px-6  max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold mb-8">Privacy Policy</h1>
 
         <div className="space-y-8 text-sm leading-relaxed">
@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
 
           <div>
             <h2 className="text-xl font-semibold mb-2">3. How We Use Your Information</h2>
-            <ul className="list-disc list-inside text-gray-700">
+            <ul className="list-disc list-inside ">
               <li>To respond to your contact requests or inquiries</li>
               <li>To deliver our services or proposals</li>
               <li>To improve website performance and user experience</li>
@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
           <div>
             <h2 className="text-xl font-semibold mb-2">6. Your Rights</h2>
             <p>
-              You have the right to access, correct, or delete any personal data we store. You may request this by contacting us at <a href="mailto:contact@youragency.com" className="text-blue-600 underline">contact@youragency.com</a>.
+              You have the right to access, correct, or delete any personal data we store. You may request this by contacting us at <a href="mailto:graphicworksdigital@gmail.com" className="text-blue-600 underline">graphicworksdigital@gmail.com</a>.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function PrivacyPolicy() {
           <div>
             <h2 className="text-xl font-semibold mb-2">9. Contact Us</h2>
             <p>
-              If you have any questions or concerns, email us at <a href="mailto:contact@youragency.com" className="text-blue-600 underline">contact@youragency.com</a>.
+              If you have any questions or concerns, email us at <a href="mailto:graphicworksdigital@gmail.com" className="text-blue-600 underline">graphicworksdigital@gmail.com</a>.
             </p>
           </div>
         </div>

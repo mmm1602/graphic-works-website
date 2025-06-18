@@ -104,7 +104,7 @@ export default function About() {
       {/* Story Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-6 text-gray-900 dark:text-white">Our Story</h2>
+          <h2 className="text-3xl font-semibold mb-6 text-black dark:text-white">Our Story</h2>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
             We started this agency with a simple idea: to create websites that not only look great but actually help businesses grow. Our team brings together designers, developers, and strategists who care deeply about delivering value — not just visuals.
           </p>
