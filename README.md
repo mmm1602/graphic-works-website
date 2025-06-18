@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🖥️ Graphic Works – Business Website Template
 
-## Getting Started
+[Live Demo →](https://www.graphicworks.digital)
 
-First, run the development server:
+**Graphic Works** is a sleek, responsive website template designed for small businesses and creative professionals. Built with modern web technologies, it emphasizes performance, clean design, and usability. Ideal for showcasing services, portfolios, and business information.
+
+---
+
+## 🔧 Tech Stack
+
+- **React.js** – Component-based front-end architecture
+- **Tailwind CSS** – Utility-first CSS framework for rapid and responsive design
+- **Vercel** – Deployment, hosting, and built-in analytics
+- **JavaScript (ES6+)** – Logic and interactivity
+
+---
+
+## ✨ Features
+
+- 🔹 Fast, mobile-friendly design
+- 🔹 SEO-optimized with meta tags and structured layout
+- 🔹 Vercel Analytics for performance and user behavior insights
+- 🔹 Modular components for easy reuse and customization
+- 🔹 Clean, professional layout tailored for business needs
+
+---
+
+## 📸 Live Demo
+
+Visit the live site here:  
+👉 **[https://www.graphicworks.digital](https://www.graphicworks.digital)**
+
+---
+
+## 📦 Getting Started
+
+To run the project locally:
 
 ```bash
+git clone https://github.com/mmm1602/graphic-works-site.git
+cd graphic-works-site
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
