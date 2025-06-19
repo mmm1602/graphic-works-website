@@ -21,11 +21,12 @@ const resourcesLinks = [
 
 const socialLinks = [
   {
-    href: "https://facebook.com",
-    label: "Facebook",
+    href: "https://instagram.com/graphicworks.digital",
+    label: "Instagram",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5">
-        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988h-2.54v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+        <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.332 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.265-.058 1.645-.07 4.849-.07zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.548.392 3.515 1.425 2.482 2.458 2.221 3.681 2.162 4.962.013 8.332 0 8.741 0 12s.013 3.668.072 4.948c.059 1.281.32 2.504 1.353 3.537 1.033 1.033 2.256 1.294 3.537 1.353 1.281.059 1.69.072 4.948.072s3.668-.013 4.948-.072c1.281-.059 2.504-.32 3.537-1.353 1.033-1.033 1.294-2.256 1.353-3.537.059-1.281.072-1.69.072-4.948s-.013-3.668-.072-4.948c-.059-1.281-.32-2.504-1.353-3.537-1.033-1.033-2.256-1.294-3.537-1.353C15.668.013 15.259 0 12 0z" />
+        <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
       </svg>
     ),
   },
@@ -49,13 +50,13 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex flex-col items-center gap-2 md:gap-4 md:items-center">
-            <span className="uppercase text-green-400 font-semibold mb-2 tracking-wide">Navigation</span>
+          <nav className="flex flex-col items-center gap-1 md:gap-2 md:items-center">
+            <span className="uppercase font-semibold mb-2 tracking-wide">Navigation</span>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-green-400 transition font-medium text-base"
+                className="hover:underline transition font-medium text-base"
               >
                 {link.label}
               </Link>
@@ -63,13 +64,13 @@ export default function Footer() {
           </nav>
 
           {/* Resources Links */}
-          <nav className="flex flex-col items-center gap-2 md:gap-4 md:items-center">
-            <span className="uppercase text-green-400 font-semibold mb-2 tracking-wide">Resources</span>
+          <nav className="flex flex-col items-center gap-1 md:gap-2 md:items-center">
+            <span className="uppercase font-semibold mb-2 tracking-wide">Resources</span>
             {resourcesLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-green-400 transition font-medium text-base"
+                className="hover:underline transition font-medium text-base"
               >
                 {link.label}
               </Link>
@@ -83,7 +84,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="hover:text-green-400 transition text-sm"
+                  className="hover:underline transition text-sm"
                 >
                   {link.label}
                 </Link>
@@ -99,7 +100,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-green-400 transition"
+                  className="hover:underline transition"
                   aria-label={social.label}
                 >
                   {social.icon}

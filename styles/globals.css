@@ -55,17 +55,64 @@ html.dark button {
 
 /* Responsive Typography */
 h1 {
-  @apply text-xl md:text-xl lg:text-5xl;
+  @apply text-4xl md:text-4xl lg:text-5xl;
 }
 
 h2 {
-  @apply text-xl md:text-xl lg:text-4xl;
+  @apply text-xl md:text-3xl lg:text-4xl;
 }
 
 h3 {
-  @apply text-xl md:text-xl lg:text-3xl;
+  @apply text-lg md:text-2xl lg:text-3xl;
 }
 
 p {
   @apply text-base md:text-lg lg:text-xl;
+}
+
+/* Improved Spacing for Mobile and Desktop */
+.wrapper {
+  @apply px-4 md:px-8 lg:px-16;
+}
+
+section {
+  @apply py-8 md:py-16 lg:py-24;
+}
+
+/* Responsive Containers */
+.container {
+  @apply max-w-full md:max-w-3xl lg:max-w-7xl mx-auto;
+}
+
+/* Improved Button Sizes */
+button {
+  @apply text-sm md:text-base lg:text-lg px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4;
+}
+
+/* Improved Link Visibility */
+a {
+  @apply text-sm md:text-base lg:text-lg;
+}
+
+/* Improved Image Responsiveness */
+img {
+  @apply w-full h-auto max-w-full;
+}
+
+/* Navbar Title */
+.nav-title {
+  @apply text-2xl md:text-3xl lg:text-4xl font-bold text-green-600;
+}
+
+html.dark .nav-title {
+  @apply text-green-400;
+}
+
+/* Navbar Links */
+.nav-link {
+  @apply text-base md:text-lg lg:text-xl text-green-600 hover:underline focus:outline-none focus:ring-green-500;
+}
+
+html.dark .nav-link {
+  @apply text-green-400 hover:underline focus:ring-green-300;
 }

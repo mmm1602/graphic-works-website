@@ -16,89 +16,55 @@ export default function About() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative text-white py-44 md:py-64 px-6 text-center overflow-hidden bg-gradient-to-br from-black via-green-700/70 to-green-400/50">
-        {/* Enhanced decorative wallpaper background */}
-        <div className="absolute inset-0 pointer-events-none z-0">
-          {/* Large blurred gradient blobs */}
-          <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full bg-green-300 opacity-30 blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] rounded-full bg-green-500 opacity-20 blur-2xl animate-spin-slow"></div>
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-green-800 opacity-40 blur-3xl animate-pulse"></div>
-          {/* Subtle geometric SVG patterns */}
-          <svg className="absolute top-0 left-0 opacity-10" width="800" height="400" viewBox="0 0 800 400" fill="none">
-        <defs>
-          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#059669" strokeWidth="1"/>
-          </pattern>
-        </defs>
-        <rect width="800" height="400" fill="url(#grid)" />
-          </svg>
-          {/* Animated floating circles */}
-          <svg className="absolute top-20 right-40 animate-float-slow opacity-20" width="120" height="120" viewBox="0 0 120 120" fill="none">
-        <circle cx="60" cy="60" r="60" fill="#10b981" />
-          </svg>
-          <svg className="absolute bottom-32 left-24 animate-float-slower opacity-15" width="80" height="80" viewBox="0 0 80 80" fill="none">
-        <circle cx="40" cy="40" r="40" fill="#34d399" />
-          </svg>
+      <section className="relative text-white px-6 text-center overflow-hidden bg-gradient-to-br from-black via-green-700/70 to-green-400/50 min-h-screen flex items-center justify-center">
+        {/* Global Background */}
+        <div className="absolute inset-0 w-full -z-10 h-full bg-gradient-to-br from-black via-green-700/70 to-green-400/50 overflow-hidden">
+          {/* Enhanced decorative wallpaper background */}
+          <div className="absolute inset-0 pointer-events-none z-0">
+            {/* Large blurred gradient blobs */}
+            <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full bg-green-300 opacity-30 blur-3xl animate-pulse"></div>
+            <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] rounded-full bg-green-500 opacity-20 blur-2xl animate-spin-slow"></div>
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-green-800 opacity-40 blur-3xl animate-pulse"></div>
+            {/* Subtle geometric SVG patterns */}
+            <svg className="absolute top-0 left-0 opacity-10" width="100%" height="400" viewBox="0 0 800 400" fill="none">
+              <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#059669" strokeWidth="1" />
+                </pattern>
+              </defs>
+              <rect width="800" height="400" fill="url(#grid)" />
+            </svg>
+            {/* Animated floating circles */}
+            <svg className="absolute top-20 right-40 animate-float-slow opacity-20" width="120" height="120" viewBox="0 0 120 120" fill="none">
+              <circle cx="60" cy="60" r="60" fill="#10b981" />
+            </svg>
+            <svg className="absolute bottom-32 left-24 animate-float-slower opacity-15" width="80" height="80" viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="40" r="40" fill="#34d399" />
+            </svg>
+          </div>
         </div>
         <div className="relative z-10 max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight animate-fade-in">
-        More Than Just a <span className="text-green-200">Web Design Studio</span>
+            More Than Just a <span className="text-green-200">Web Design Studio</span>
           </h1>
           <p className="text-lg md:text-2xl text-green-100 max-w-2xl mx-auto mb-10 drop-shadow animate-fade-in delay-200">
-        We’re a creative team passionate about crafting websites, brands, and digital experiences that drive real results for your business.
+            We’re a creative team passionate about crafting websites, brands, and digital experiences that drive real results for your business.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in delay-400">
-        <a
-          href="/contact"
-          className="inline-block px-8 py-4 bg-white text-green-800 font-semibold rounded-full shadow-lg hover:bg-green-100 transition"
-        >
-          Start Your Project
-        </a>
-        <a
-          href="#story"
-          className="inline-block px-8 py-4 bg-green-800 bg-opacity-60 text-white font-semibold rounded-full shadow-lg hover:bg-green-700 transition border border-white border-opacity-20"
-        >
-          Our Story
-        </a>
+            <a
+              href="/contact"
+              className="inline-block px-8 py-4 bg-white text-green-800 font-semibold rounded-full shadow-lg hover:bg-green-100 transition"
+            >
+              Start Your Project
+            </a>
+            <a
+              href="#story"
+              className="inline-block px-8 py-4 bg-green-800 bg-opacity-60 text-white font-semibold rounded-full shadow-lg hover:bg-green-700 transition border border-white border-opacity-20"
+            >
+              Our Story
+            </a>
           </div>
         </div>
-        <style jsx global>{`
-          @keyframes fade-in {
-        0% { opacity: 0; transform: translateY(30px);}
-        100% { opacity: 1; transform: translateY(0);}
-          }
-          .animate-fade-in {
-        animation: fade-in 1s ease forwards;
-        opacity: 0;
-          }
-          .animate-fade-in.delay-200 {
-        animation-delay: 0.2s;
-          }
-          .animate-fade-in.delay-400 {
-        animation-delay: 0.4s;
-          }
-          @keyframes spin-slow {
-        0% { transform: rotate(0deg);}
-        100% { transform: rotate(360deg);}
-          }
-          .animate-spin-slow {
-        animation: spin-slow 12s linear infinite;
-          }
-          @keyframes float-slow {
-        0%, 100% { transform: translateY(0);}
-        50% { transform: translateY(-30px);}
-          }
-          .animate-float-slow {
-        animation: float-slow 8s ease-in-out infinite;
-          }
-          @keyframes float-slower {
-        0%, 100% { transform: translateY(0);}
-        50% { transform: translateY(20px);}
-          }
-          .animate-float-slower {
-        animation: float-slower 12s ease-in-out infinite;
-          }
-        `}</style>
       </section>
 
       {/* Story Section */}

@@ -21,6 +21,14 @@ export default function MatrixBackground() {
     const drops = Array(columns).fill(1);
 
     const drawMatrix = () => {
+      if (isMorphing) {
+        // Morphing logic: Clear the canvas with solid black
+        ctx.fillStyle = 'rgba(0, 0, 0, 1)';
+        ctx.fillRect(0, 0, width, height);
+        return;
+      }
+
+      // Normal Matrix effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.01)';
       ctx.fillRect(0, 0, width, height);
 
@@ -29,23 +37,12 @@ export default function MatrixBackground() {
 
       drops.forEach((y, x) => {
         const text = characters[Math.floor(Math.random() * characters.length)];
+        ctx.fillText(text, x * fontSize, y * fontSize);
 
-        if (isMorphing) {
-          // Morphing logic: Align characters to form footer content
-          const footerText = 'GraphicWorks | Building Brands, Not Just Websites © 2025';
-          const footerChar = footerText[x % footerText.length] || ' ';
-          const fadeEffect = Math.sin((x + y) * 0.1) * 0.5 + 0.5; // Create a wave-like fade effect
-          ctx.fillStyle = `rgba(0, 255, 0, ${fadeEffect})`; // Adjust opacity dynamically
-          ctx.fillText(footerChar, x * fontSize, height - fontSize * 2);
-        } else {
-          // Normal Matrix effect
-          ctx.fillText(text, x * fontSize, y * fontSize);
-
-          if (y * fontSize > height && Math.random() > 0.975) {
-            drops[x] = 0;
-          }
-          drops[x]++;
+        if (y * fontSize > height && Math.random() > 0.975) {
+          drops[x] = 0;
         }
+        drops[x]++;
       });
     };
 
@@ -66,11 +63,11 @@ export default function MatrixBackground() {
   }, [isMorphing]);
 
   return (
-    <div className="w-full h-full bg-gradient-to-b from-black via-black/90 to-black opacity-100 z-10">
-        <canvas
-            ref={canvasRef}
-            className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"
-        />
+    <div className="container w-full h-full bg-gradient-to-b from-black via-black/90 to-black opacity-100 z-10">
+      <canvas
+        ref={canvasRef}
+        className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"
+      />
     </div>
   );
 }
