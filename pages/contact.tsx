@@ -14,65 +14,114 @@ export default function Contact() {
         />
       </Head>
 
-      <Navbar/>
-      {/* Global Background */}
-      <div className="absolute inset-0 w-full -z-10 h-full bg-gradient-to-br from-black via-green-700/70 to-green-400/50 overflow-hidden">
-        {/* Enhanced decorative wallpaper background */}
-        <div className="absolute inset-0 pointer-events-none z-0">
-          {/* Large blurred gradient blobs */}
-          <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full bg-green-300 opacity-30 blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] rounded-full bg-green-500 opacity-20 blur-2xl animate-spin-slow"></div>
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-green-800 opacity-40 blur-3xl animate-pulse"></div>
-          {/* Subtle geometric SVG patterns */}
-          <svg className="absolute top-0 left-0 opacity-10" width="100%" height="400" viewBox="0 0 800 400" fill="none">
-            <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#059669" strokeWidth="1" />
-              </pattern>
-            </defs>
-            <rect width="800" height="400" fill="url(#grid)" />
-          </svg>
-          {/* Animated floating circles */}
-          <svg className="absolute top-20 right-40 animate-float-slow opacity-20" width="120" height="120" viewBox="0 0 120 120" fill="none">
-            <circle cx="60" cy="60" r="60" fill="#10b981" />
-          </svg>
-          <svg className="absolute bottom-32 left-24 animate-float-slower opacity-15" width="80" height="80" viewBox="0 0 80 80" fill="none">
-            <circle cx="40" cy="40" r="40" fill="#34d399" />
-          </svg>
+      <div className="relative bg-black text-white min-h-screen flex flex-col overflow-hidden">
+        {/* Global background */}
+        <div className="absolute inset-0 z-0 h-full w-full bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:20px_24px]">
+          <div className="fixed left-0 right-0 top-0 -z-10 m-auto h-[500px] w-[500px] rounded-full bg-fuchsia-400 opacity-30 blur-[100px]"></div>
         </div>
-      </div>
-      
-      {/* Contact Section – Side by Side */}
-      <section className="py-20 px-6">
-        <div className="bg-transparent max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    
-          {/* Left Text Content */}
-            <div className="w-full md:w-1/2">
-            <h2 className="text-3xl font-semibold mb-4">Start a Conversation</h2>
-            <p className="text-gray-100 mb-6">
-              Whether you're ready to get started or just exploring your options, we're happy to talk.
-              Tell us about your project and we'll reply with a custom quote or helpful advice.
-            </p>
-            <ul className="text-gray-100 space-y-2 text-sm">
-              <li>📍 Based in Orlando, FL (Serving clients globally)</li>
-              <li>✉️ graphicworksdigital@gmail.com</li>
-              <li>
-              📞{' '}
-              <a href="tel:+16892981104" className="hover:underline">
-                +1 (689) 298‑1104
-              </a>
-              </li>
-            </ul>
+
+        <Navbar />
+
+        <main className="flex-grow">
+          {/* Hero */}
+          <section className="relative pt-20 pb-8 px-6 text-center">
+            {/* Decorative soft glows */}
+            <div className="pointer-events-none absolute inset-0 -z-10">
+              <div className="absolute -top-24 -left-24 h-[320px] w-[320px] rounded-full bg-fuchsia-500/10 blur-3xl" />
+              <div className="absolute top-10 right-[-10%] h-[280px] w-[280px] rounded-full bg-blue-500/10 blur-3xl" />
             </div>
 
-          {/* Right Contact Form */}
-          <div className="w-full md:w-1/2">
-            <ContactForm />
-          </div>
-        </div>
-      </section>
+            <div className="relative z-10 max-w-3xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Get in <span className="bg-gradient-to-r from-blue-400 to-fuchsia-400 bg-clip-text text-transparent">Touch</span>
+              </h1>
+              <p className="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto">
+                Tell us about your project and we’ll follow up with next steps and a custom quote.
+              </p>
 
-      <Footer />
+              {/* Badges */}
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
+                <span className="px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/60">Replies in ~24 hours</span>
+                <span className="px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/60">No obligation consultation</span>
+                <span className="px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/60">Projects worldwide</span>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Section – Info + Form */}
+          <section className="relative px-6 pb-24">
+            {/* Background accents */}
+            <div className="pointer-events-none absolute inset-0 -z-10">
+              <div className="absolute bottom-[-10%] left-[-10%] h-[380px] w-[380px] rounded-full bg-fuchsia-500/10 blur-3xl" />
+              <div className="absolute bottom-0 right-[-15%] h-[420px] w-[420px] rounded-full bg-blue-500/10 blur-3xl" />
+            </div>
+
+            <div className="max-w-6xl mx-auto grid gap-8 lg:grid-cols-2 items-stretch">
+              {/* Info panel */}
+              <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 backdrop-blur p-6 md:p-8 h-full shadow-xl">
+                <h2 className="text-2xl font-semibold">Contact information</h2>
+                <p className="mt-2 text-gray-300">Prefer email, phone, or a quick form—whatever works best for you.</p>
+
+                <div className="mt-8 space-y-4">
+                  <a href="mailto:graphicworksdigital@gmail.com" className="group flex items-center gap-4 rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 hover:bg-zinc-900/70 transition">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/15 text-blue-300 border border-blue-500/20">@</span>
+                    <div>
+                      <div className="text-sm text-gray-400">Email</div>
+                      <div className="font-medium">graphicworksdigital@gmail.com</div>
+                    </div>
+                  </a>
+                  <a href="tel:+16892981104" className="group flex items-center gap-4 rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 hover:bg-zinc-900/70 transition">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/15 text-blue-300 border border-blue-500/20">📞</span>
+                    <div>
+                      <div className="text-sm text-gray-400">Phone</div>
+                      <div className="font-medium">+1 (689) 298‑1104</div>
+                    </div>
+                  </a>
+                  <div className="flex items-center gap-4 rounded-xl border border-zinc-800 bg-zinc-900/40 p-4">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/15 text-blue-300 border border-blue-500/20">📍</span>
+                    <div>
+                      <div className="text-sm text-gray-400">Location</div>
+                      <div className="font-medium">Orlando, FL — working with clients globally</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 grid grid-cols-2 gap-3 text-sm">
+                  <div className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-3">Mon–Fri · 9am–6pm EST</div>
+                  <div className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-3">Replies within a day</div>
+                </div>
+
+                <div className="mt-8">
+                  <div className="text-sm text-gray-400 mb-2">Social</div>
+                  <div className="flex items-center gap-3">
+                    <a href="https://twitter.com/" target="_blank" rel="noreferrer" className="rounded-lg border border-zinc-800 bg-zinc-900/40 px-3 py-2 hover:bg-zinc-900/70">Twitter</a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="rounded-lg border border-zinc-800 bg-zinc-900/40 px-3 py-2 hover:bg-zinc-900/70">LinkedIn</a>
+                    <a href="https://github.com/" target="_blank" rel="noreferrer" className="rounded-lg border border-zinc-800 bg-zinc-900/40 px-3 py-2 hover:bg-zinc-900/70">GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Form panel */}
+              <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 backdrop-blur p-6 md:p-8 shadow-2xl">
+                <ContactForm />
+              </div>
+            </div>
+          </section>
+
+          {/* Bottom CTA */}
+          <section className="px-6 pb-24">
+            <div className="max-w-6xl mx-auto">
+              <div className="rounded-2xl border border-zinc-800 bg-gradient-to-r from-zinc-900/60 via-zinc-900/30 to-zinc-900/60 backdrop-blur p-6 md:p-8 text-center">
+                <h3 className="text-2xl font-semibold">Prefer a quick call?</h3>
+                <p className="mt-2 text-gray-300">Book a 15‑minute intro and we’ll discuss timelines, pricing, and fit.</p>
+                <a href="mailto:graphicworksdigital@gmail.com" className="mt-5 inline-block rounded-full bg-blue-500 px-6 py-3 font-medium text-white hover:bg-blue-600 transition">Email Us</a>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <Footer />
+      </div>
     </>
   );
 }

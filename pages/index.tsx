@@ -1,49 +1,30 @@
-import Head from 'next/head';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import HeroSection from '@/components/HeroSection';
-import ServicesSection from '@/components/ServicesSection';
-import PortfolioSection from '@/components/PortfolioSection';
-import AboutSection from '@/components/AboutSection';
-import AnimatedShowcase from '@/components/AnimatedShowcase';
-import FadeInWhenVisible from '@/components/FadeInWhenVisible';
-import MatrixBackground from '@/components/MatrixBackground';
-import MetaTags from '@/components/MetaTags';
-import dynamic from 'next/dynamic';
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import CarouselSection from "@/components/CarouselSection";
+import ServicesSection from "@/components/ServicesSection";
+import AboutSection from "@/components/AboutSection";
+import Footer from "@/components/Footer";
 
-const LazyPortfolioSection = dynamic(() => import('@/components/PortfolioSection'), { ssr: false });
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <Head>
-        <title>Professional Web Design | GraphicWorks</title>
-        <meta name="description" content="Professional web design services for small businesses, startups, and creators." />
-        <link rel="canonical" href="https://graphicworks.digital" />
-        <MetaTags
-          title="GraphicWorks | Custom Web Design & Creative Media"
-          description="We design modern, high-performing websites and visual experiences that help businesses grow."
-          url="https://graphicworks.digital/"
-        />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "GraphicWorks | Custom Web Design & Creative Media",
-            description: "We design modern, high-performing websites and visual experiences that help businesses grow.",
-            url: "https://graphicworks.digital/",
-          })}
-        </script>
-      </Head>
-      {/* Matrix Background */}
-      <MatrixBackground />
+    <div className="relative bg-black text-white min-h-screen flex flex-col overflow-hidden">
+      {/* Global background */}
+      <div className="absolute inset-0 z-0 h-full w-full bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:20px_24px]"><div className="fixed left-0 right-0 top-0 -z-10 m-auto h-[500px] w-[500px] rounded-full bg-fuchsia-400 opacity-30 blur-[100px]"></div></div>
+  
+
+      {/* Top navigation */}
       <Navbar />
-      <HeroSection />
-      <ServicesSection />
-      <AnimatedShowcase />
-      <LazyPortfolioSection />
-      <AboutSection />
+
+      {/* Main content */}
+      <main className="flex-grow">
+        <HeroSection />
+        <CarouselSection />
+        <ServicesSection />
+        <AboutSection />
+      </main>
+
+      {/* Footer */}
       <Footer />
-    </>
+    </div>
   );
 }

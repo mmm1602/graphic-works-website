@@ -3,6 +3,7 @@
 /* Smooth scrolling for better UX */
 html {
   scroll-behavior: smooth;
+  background-color: #000000; /* Custom dark gray color */
 }
 
 /* Light Mode Styles */
@@ -11,11 +12,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-black font-bold;
+  @apply text-white font-bold;
 }
 
-p, text {
-  @apply text-black leading-relaxed;
+p {
+  @apply text-white leading-relaxed;
 }
 
 /* Dark Mode Styles */
@@ -27,22 +28,29 @@ html.dark h1, h2, h3, h4, h5, h6 {
   @apply text-white font-bold;
 }
 
-html.dark p, html.dark text {
+html.dark p {
   @apply text-white leading-relaxed;
 }
 
 /* Accessibility Improvements */
 a {
-  @apply text-green-600 hover:underline focus:outline-none focus:ring-green-500;
+  @apply text-gray-300 hover:text-white text-sm font-bold focus:outline-none focus:ring-green-500;
 }
 
+
 html.dark a {
-  @apply text-green-400 hover:underline focus:outline-none focus:ring-green-300;
+  @apply text-gray-300 hover:text-white text-sm focus:outline-none focus:ring-green-300;
 }
+
+/* Accessibility Improvements */
+.logo {
+  @apply text-white text-lg font-bold focus:outline-none;
+}
+
 
 /* Utility Classes */
 img {
-  @apply rounded-lg shadow-md;
+  @apply rounded-lg shadow-md brightness-90 hover:brightness-120;
 }
 
 button {
@@ -55,15 +63,15 @@ html.dark button {
 
 /* Responsive Typography */
 h1 {
-  @apply text-4xl md:text-4xl lg:text-5xl;
+  @apply text-5xl md:text-6xl lg:text-7xl;
 }
 
 h2 {
-  @apply text-xl md:text-3xl lg:text-4xl;
+  @apply text-3xl md:text-4xl lg:text-5xl;
 }
 
 h3 {
-  @apply text-lg md:text-2xl lg:text-3xl;
+  @apply text-2xl md:text-3xl lg:text-4xl;
 }
 
 p {
@@ -84,35 +92,33 @@ section {
   @apply max-w-full md:max-w-3xl lg:max-w-7xl mx-auto;
 }
 
-/* Improved Button Sizes */
-button {
-  @apply text-sm md:text-base lg:text-lg px-3 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4;
+/* Carousel Scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-/* Improved Link Visibility */
-a {
-  @apply text-sm md:text-base lg:text-lg;
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }
 
-/* Improved Image Responsiveness */
-img {
-  @apply w-full h-auto max-w-full;
+.grainy-gradient /* resulting css */
+{
+  filter: contrast(160%) brightness(100%);
+  background: 
+	linear-gradient(313deg, rgb(72, 25, 114), rgba(90,12,103,0.39)),
+	url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='95' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* Navbar Title */
-.nav-title {
-  @apply text-2xl md:text-3xl lg:text-4xl font-bold text-green-600;
+/* Unified text selection highlight */
+::selection {
+  background-color: rgb(170, 147, 188); /* tailwind blue-500 @ 35% */
+  color: #ffffff;
+}
+::-moz-selection {
+  background-color: rgba(187, 145, 194, 0.35);
+  color: #ffffff;
 }
 
-html.dark .nav-title {
-  @apply text-green-400;
-}
-
-/* Navbar Links */
-.nav-link {
-  @apply text-base md:text-lg lg:text-xl text-green-600 hover:underline focus:outline-none focus:ring-green-500;
-}
-
-html.dark .nav-link {
-  @apply text-green-400 hover:underline focus:ring-green-300;
-}
+/* Match caret to accent color */
+html, body { caret-color: #60a5fa; /* tailwind blue-400 */ }

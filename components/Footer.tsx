@@ -35,7 +35,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-transparent py-25 relative z-10 shadow-lg">
+    <footer className="bg-gradient-to-b from-gray-900 via-black to-black/0 py-25 relative z-10 shadow-lg">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
           {/* Logo, Tagline, and Copyright */}
