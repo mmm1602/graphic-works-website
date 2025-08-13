@@ -48,19 +48,19 @@ export default function ContactForm() {
 
   return (
     <div className="bg-transparent max-w-xl mx-auto py-16 px-6">
-      <h1 className="text-4xl font-bold mb-6 text-center">Contact Us</h1>
+      <h1 className="text-4xl font-bold mb-6 text-center text-white">Contact Us</h1>
 
       {submitted ? (
-        <p className="text-green-600 text-center text-lg">Thanks! We'll be in touch soon.</p>
+        <p className="text-fuchsia-400 text-center text-lg">Thanks! We'll be in touch soon.</p>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
-          {error && <p className="text-red-600 text-sm text-center">{error}</p>}
+          {error && <p className="text-red-500 text-sm text-center">{error}</p>}
 
           <input
             name="name"
             type="text"
             placeholder="Your Name"
-            className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+            className="w-full border border-zinc-700 bg-zinc-800 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
             value={formData.name}
             onChange={handleChange}
             required
@@ -70,7 +70,7 @@ export default function ContactForm() {
             name="email"
             type="email"
             placeholder="Your Email"
-            className="w-full border border-gray-300 p-3 rounded-md"
+            className="w-full border border-zinc-700 bg-zinc-800 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
             value={formData.email}
             onChange={handleChange}
             required
@@ -80,7 +80,7 @@ export default function ContactForm() {
             name="message"
             placeholder="Your Message"
             rows={5}
-            className="w-full border border-gray-300 p-3 rounded-md"
+            className="w-full border border-zinc-700 bg-zinc-800 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
             value={formData.message}
             onChange={handleChange}
             required
@@ -88,7 +88,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="w-full bg-transparent border border-gray-300 p-3 text-white py-3 rounded-md hover:bg-gray-800 transition"
+            className="w-full bg-gradient-to-r from-blue-500 to-blue-800 text-white py-3 rounded-md hover:from-blue-600 hover:to-fuchsia-600 transition"
           >
             Send Message
           </button>

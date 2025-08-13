@@ -1,3 +1,4 @@
+'use client';
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -22,18 +23,6 @@ export default function Portfolio() {
         <Navbar />
 
         <main className="flex-grow">
-          {/* Hero Section */}
-          <section className="relative text-center overflow-hidden min-h-[60vh] flex items-center justify-center px-6">
-            <div className="relative z-10 max-w-3xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Our <span className="bg-gradient-to-r from-blue-400 to-fuchsia-400 bg-clip-text text-transparent">Portfolio</span>
-              </h1>
-              <p className="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-10">
-                A showcase of our favorite web, brand, and digital projects — crafted for real business results.
-              </p>
-            </div>
-          </section>
-
           {/* Projects Grid */}
           <section className="max-w-7xl mx-auto py-24 px-4 sm:px-8">
             <div className="grid gap-10 md:grid-cols-3">

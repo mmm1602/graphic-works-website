@@ -24,7 +24,7 @@ export default function Contact() {
 
         <main className="flex-grow">
           {/* Hero */}
-          <section className="relative pt-20 pb-8 px-6 text-center">
+          <section className="relative min-h-[50vh] flex items-center justify-center text-center">
             {/* Decorative soft glows */}
             <div className="pointer-events-none absolute inset-0 -z-10">
               <div className="absolute -top-24 -left-24 h-[320px] w-[320px] rounded-full bg-fuchsia-500/10 blur-3xl" />
@@ -114,7 +114,7 @@ export default function Contact() {
               <div className="rounded-2xl border border-zinc-800 bg-gradient-to-r from-zinc-900/60 via-zinc-900/30 to-zinc-900/60 backdrop-blur p-6 md:p-8 text-center">
                 <h3 className="text-2xl font-semibold">Prefer a quick call?</h3>
                 <p className="mt-2 text-gray-300">Book a 15‑minute intro and we’ll discuss timelines, pricing, and fit.</p>
-                <a href="mailto:graphicworksdigital@gmail.com" className="mt-5 inline-block rounded-full bg-blue-500 px-6 py-3 font-medium text-white hover:bg-blue-600 transition">Email Us</a>
+                <a href="mailto:graphicworksdigital@gmail.com" className="mt-5 inline-block rounded-full bg-gradient-to-r from-blue-500 to-blue-800 px-6 py-3 font-medium text-white hover:bg-blue-600 transition">Email Us</a>
               </div>
             </div>
           </section>

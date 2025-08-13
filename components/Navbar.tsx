@@ -20,7 +20,7 @@ export default function Navbar() {
           className="text-2xl font-bold tracking-wide"
         >
           <Link href="/" className="text-white">
-            Graphic<span className="text-fuchsia-400">Works</span>
+            Graphic<span className="bg-gradient-to-r from-blue-400 to-fuchsia-400 bg-clip-text text-transparent hover:text-white">Works</span>
           </Link>
         </motion.div>
 
